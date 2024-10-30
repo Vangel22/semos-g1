@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 // data doagja od nasata MongoDB baza
 const data = [
@@ -16,6 +17,8 @@ const data = [
     name: "Ceca",
   },
 ];
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   return res.send("Hello World");
