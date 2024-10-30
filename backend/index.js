@@ -21,7 +21,7 @@ const data = [
 app.use(cors());
 
 app.get("/", (req, res) => {
-  return res.send("Hello World");
+  return res.send(`Hello World ${process.env.TEST}`);
 });
 
 app.get("/test", (req, res) => {
